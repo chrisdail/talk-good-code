@@ -6,8 +6,9 @@ class: center, middle, inverse
 
 # Good Code
 
-Chris Dail - [@chrisdail](http://twitter.com/chrisdail)
-Director, Software Engineering at [Dell EMC](http://www.emc.com)
+Chris Dail - [@chrisdail](https://twitter.com/chrisdail)
+
+Senior Director, Software Engineering at [Akiri](https://akiri.com)
 
 ---
 
@@ -29,19 +30,21 @@ layout: false
 - Bad code decreases productivity over time
 - Makes it hard to maintain
 - Broken Window Affect
-  - Bad code causes carelessness 
+  - Bad code causes carelessness
   - leads to more bad code
 
 ---
 
 template: heading
-# Developers spend more time reading code than writing it
+# Good Code Makes Happy Coders
 
 ---
 
 # Qualities of Good Code
 
-- **Readable** - Other people need to maintain it
+- **Readability**
+  - Other people need to maintain it
+  - Developer spend more time reading than writing code
 - Simple - So it can be understood easily
 - Minimal - No duplication
 - One thing - Functions do one thing only
@@ -53,15 +56,8 @@ template: heading
 
 template: heading
 
-# Scout Rule
-## Leave the code better than you found it
-
----
-
-template: heading
-
-# We have deadlines to hit
 # Clean it up in the next release
+# We have deadlines to hit
 ## Dangerous Thinking
 
 ---
@@ -70,7 +66,18 @@ template: heading
 
 - You will likely never come back to fix things
 - There is always a 'Grand Redesign' on the horizon that will never come
-- Code Reviews: Don't let things slip through
+- Code Reviews: Don't let poor code slip through
+
+---
+
+# Quantity and Quality
+
+- Industry average is around 15-50 bugs per 1000 lines of code
+- Writing less code will result in fewer bugs
+- Cannot do this artificially
+  - Remember **Readability**
+  - Go for fewer lines that are more meaningful (quality)
+  - Keep things simple
 
 ---
 
@@ -96,7 +103,7 @@ String acctNm
 
 # Naming
 
-- Classes/Types: Nouns, avoid fluff words
+- Classes/Types: Nouns, meaningful and avoid fluff words
 .good[
 ```
 Account
@@ -109,8 +116,15 @@ AuthorizationPolicy
 ```
 SystemData
 ConfigInfo
+Manager
+Util
 ```
 ]
+
+---
+
+# Naming
+
 - Methods/Functions: Verbs. Function names descriptive and don't be afraid of length
 .good[
 ```
@@ -129,13 +143,15 @@ taskStatusInProgress()
 
 ---
 
+class: bad
+
 # Naming - Avoid Encodings
 
 - Type, Scope, Static information encoded in the name
 - Scope information encoded in the name
 - Avoid Hungarian Notation
 - This is what we have IDEs and syntax highlighting for
-.bad[
+
 ```
 ListBox lb_name
 private static Logger _log;
@@ -143,7 +159,22 @@ private m_name;
 Integer nSize;
 List<User> usersList;
 ```
-]
+
+---
+
+# Naming - Libraries / Modules / Packages
+
+- Top 5 worst modules names
+  - `utils`
+  - `commons`
+  - `shared`
+  - `lib`
+  - `tools`
+- No information about their usage
+- Alternatives
+  - `io`
+  - `config`
+  - `encryption`
 
 ---
 
@@ -151,13 +182,25 @@ class: bad
 
 # Functions
 
-- Should do one thing and only one thing
+- Should do **one** thing and only one thing
 ```
 private void validateAndExtractInformationFromZip()
 ```
+- Be wary of **and** in function names
 - You can always call another function
 - Should be short (Keep under 20 lines in most cases)
 - Avoid side effects (getName should not change state)
+
+---
+
+class: bad
+
+# Classes and Objects
+
+- Classes should also **Do One Thing**
+- Single Level of Abstraction
+- Properties and functions follow the "theme" of the class
+- Avoid "junk Drawer" classes the mix unrelated things
 
 ---
 
@@ -169,7 +212,7 @@ class: bad
 - Use constants defined in one place
 
 ```
-if ((i == 0) && 
+if ((i == 0) &&
 !((attVal.charAt(i) >= 1 && attVal.charAt(i) <= 31)
 || (attVal.charAt(i) == 33)
 || (attVal.charAt(i) >= 36 && attVal.charAt(i) <= 42)
@@ -185,11 +228,12 @@ if ((i == 0) &&
 
 - Add comments only when it enhances the readability of the code
 - If you need to explain your code, maybe the code is not clear
-- Explain intent of the code
+- Explain **intent** of the code
+- Answer **Why** not **How**
 - Use TODOs sparingly
   - Things to be implemented soon (by you)
   - Works in progress
-  - Unimplemented features belong in JIRA
+  - Unimplemented features belong in Trello/JIRA
 
 ---
 
@@ -253,6 +297,13 @@ if (state == null) {
 ---
 
 template: heading
+
+# Scout Rule
+## Leave the code better than you found it
+
+---
+
+template: heading
 ![rome](images/when-in-rome.jpg)
 
 ---
@@ -307,14 +358,35 @@ template: heading
 
 ---
 
+# Clever Code
+
+- Be wary of "clever" or "cute" code
+- Solutions that are not intuitive may be harder to read
+- Sometimes the more dull, straightforward way is better
+- Keep in mind the programming level of your team
+
+---
+
+# Reinventing the Wheel
+
+- Consider open source packages over rolling your own
+- All code is a liability you need to maintain
+- Ask if this library is part of your code competencies
+- Get over your pride
+  - You may be able to build a great search engine
+  - Your time may be better used elsewhere
+
+---
+
 # Using Third Party / Open Source Packages
 
 - As few dependencies as required to do the task
 - Favor using tools you already have
-- Don't reinvent the wheel. Choose the right tool for the job. How much code do I need to add to use this
-- Use the right tool for the job (bash/sed/awk are poor json parsers)
+- Choose the right tool for the job
+  - How much code do I need to use this?
+  - bash/sed/awk are poor json parsers
 - Fork wisely. Fork only if needed and do it right
-  - Do not just modify files that are part of an external library
+  - Avoid cherry-picking and committing modified files
 
 ---
 
