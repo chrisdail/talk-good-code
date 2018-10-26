@@ -4,11 +4,16 @@ class: center, middle, inverse
 
 ---
 
-# Good Code
+# The Good Code
 
 Chris Dail - [@chrisdail](https://twitter.com/chrisdail)
 
 Senior Director, Software Engineering at [Akiri](https://akiri.com)
+
+---
+
+# Welcome!
+# Everything is fine.
 
 ---
 
@@ -31,7 +36,7 @@ layout: false
 - Makes it hard to maintain
 - Broken Window Affect
   - Bad code causes carelessness
-  - leads to more bad code
+  - Leads to more bad code
 
 ---
 
@@ -47,17 +52,16 @@ template: heading
   - Developer spend more time reading than writing code
 - Simple - So it can be understood easily
 - Minimal - No duplication
-- One thing - Functions do one thing only
+- One thing - One thing does one thing
 - No surprises - Should work as expected
-- Meaningful Naming - Self documenting.
+- Meaningful Naming - Self documenting
 - Small, simple abstractions
 
 ---
 
 template: heading
 
-# Clean it up in the next release
-# We have deadlines to hit
+# Deadlines... Fix in the Next Release
 ## Dangerous Thinking
 
 ---
@@ -147,9 +151,9 @@ class: bad
 
 # Naming - Avoid Encodings
 
-- Type, Scope, Static information encoded in the name
-- Scope information encoded in the name
-- Avoid Hungarian Notation
+- Avoid Type, Scope, Static information encoded in the name
+    - Scope information encoded in the name
+    - Hungarian Notation
 - This is what we have IDEs and syntax highlighting for
 
 ```
@@ -200,7 +204,7 @@ class: bad
 - Classes should also **Do One Thing**
 - Single Level of Abstraction
 - Properties and functions follow the "theme" of the class
-- Avoid "junk Drawer" classes the mix unrelated things
+- Avoid "Junk Drawer" classes the mix unrelated things
 
 ---
 
@@ -213,13 +217,13 @@ class: bad
 
 ```
 if ((i == 0) &&
-!((attVal.charAt(i) >= 1 && attVal.charAt(i) <= 31)
-|| (attVal.charAt(i) == 33)
-|| (attVal.charAt(i) >= 36 && attVal.charAt(i) <= 42)
-|| (attVal.charAt(i) >= 45 && attVal.charAt(i) <= 58)
-|| (attVal.charAt(i) == 61)
-|| (attVal.charAt(i) >= 63 && attVal.charAt(i) <= 91)
-|| (attVal.charAt(i) >= 93)
+    !((attVal.charAt(i) >= 1 && attVal.charAt(i) <= 31)
+    || (attVal.charAt(i) == 33)
+    || (attVal.charAt(i) >= 36 && attVal.charAt(i) <= 42)
+    || (attVal.charAt(i) >= 45 && attVal.charAt(i) <= 58)
+    || (attVal.charAt(i) == 61)
+    || (attVal.charAt(i) >= 63 && attVal.charAt(i) <= 91)
+    || (attVal.charAt(i) >= 93)
 ```
 
 ---
@@ -229,7 +233,7 @@ if ((i == 0) &&
 - Add comments only when it enhances the readability of the code
 - If you need to explain your code, maybe the code is not clear
 - Explain **intent** of the code
-- Answer **Why** not **How**
+- Answer **Why** not **What** or **How**
 - Use TODOs sparingly
   - Things to be implemented soon (by you)
   - Works in progress
@@ -243,21 +247,21 @@ class: bad
 
 - Redundant - Is it saying the same thing as the code?
 ```
-// Checks for null
-if (state == null) {
-    return null; // XXX
-}
+    // Checks for null
+    if (state == null) {
+        return null; // XXX
+    }
 ```
 ```java
-  /**
-    * Construct an account chargeback context.
-    *
-    * @param   name    The account name
-    * @param   id      The account ID
-    */
-  public AccountChargeback(String name, String id) {
-      super(name, id);
-  }
+    /**
+      * Construct an account chargeback context.
+      *
+      * @param   name    The account name
+      * @param   id      The account ID
+      */
+    public AccountChargeback(String name, String id) {
+        super(name, id);
+    }
 ```
 
 ---
@@ -268,14 +272,14 @@ class: bad
 
 - Misleading
 ```
-// Check to see if the order is valid.
-// Returns true for valid, false for invalid
-public boolean validateOrder(Order order) {
-    if (!order.isValid()) {
-        throw new ValidationException("Order is not valid");
+    // Check to see if the order is valid.
+    // Returns true for valid, false for invalid
+    public boolean validateOrder(Order order) {
+        if (!order.isValid()) {
+            throw new ValidationException("Order is not valid");
+        }
+        return true;
     }
-    return true;
-}
 ```
 - Commented Out Code - This is what version control history is for
 - References to bug numbers - Also, version control history
@@ -310,7 +314,8 @@ template: heading
 
 # When in Rome
 
-- Follow the conventions of the language and codebase you are in
+- Follow the code style of the codebase you are in
+- Follow the conventions of the language
 - CamelCase vs snake_case
 - Tabs vs Spaces (Java 4 spaces, Go-lang tabs)
   - Consistent indentation levels
@@ -320,17 +325,21 @@ template: heading
 
 # Error Handling
 
-- Early return for invalid cases (bouncer pattern?)
+- Early return for invalid cases (bouncer pattern)
 - Behave in reasonable ways over throwing errors (empty list, might as well error)
-- No exception swallowing
+  - Exceptions should be exceptional
+- No exception swallowing (empty catch block)
 
 ---
 
 # DRY - Don't Repeat Yourself
 
 - "Every piece of knowledge must have a single unambiguous, authoritative representation within a system" - Pragmatic Programmer
-- redundant comments are an example of repetition
-- Multiple developers - Duplication of validation/util functions. Central place for these. Look before your write
+- Redundant comments are an example of repetition
+- Multiple developers teams
+  - Duplication of validation/util functions
+  - Central place for these
+  - Look for existing code before your write
 - Make reuse easy
 
 ---
@@ -342,7 +351,7 @@ template: heading
 
 # Copy and Paste
 
-- Copy-Paste may be the most evil programming technique
+- Copy-Paste may be the most evil of programming techniques
 - Single change needs to be fixed in multiple places
 - You may not fully understand the code being copied
 - Consider reuse with functions over copy and paste
@@ -351,10 +360,12 @@ template: heading
 
 # Version Control
 
-- Readability of Version Control History should read like a story
-- commit comments
-- small commits
-- small pull requests
+- Version Control History should be treated like **code**
+- Readability is important
+- Should read like a story
+- Good Commit comments
+- Small commits
+- Small pull requests
 
 ---
 
@@ -371,7 +382,7 @@ template: heading
 
 - Consider open source packages over rolling your own
 - All code is a liability you need to maintain
-- Ask if this library is part of your code competencies
+- Ask if this library is part of your core competencies
 - Get over your pride
   - You may be able to build a great search engine
   - Your time may be better used elsewhere
@@ -395,8 +406,4 @@ template: heading
 - Clean Code - Robert C. Martin
 - The Pragmatic Programmer - Andrew Hunt, David Thomas
 - Code Complete - Steve McConnell
-
----
-
-
 
