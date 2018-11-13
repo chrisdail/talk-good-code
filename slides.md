@@ -66,9 +66,9 @@ template: heading
 
 ---
 
-# Get it Right the First Time
+# You will likely never come back
 
-- You will likely never come back to fix things
+- Get it Right the First Time
 - There is always a 'Grand Redesign' on the horizon that will never come
 - Code Reviews: Don't let poor code slip through
 
@@ -214,6 +214,7 @@ class: bad
 
 - Avoid magic numbers or magic strings
 - Use constants defined in one place
+- Add detail with constants (`NUMBER_33` vs `ASCII_CHAR_EXCLAMATION`)
 
 ```
 if ((i == 0) &&
@@ -381,8 +382,8 @@ template: heading
 # Reinventing the Wheel
 
 - Consider open source packages over rolling your own
-- All code is a liability you need to maintain
 - Ask if this library is part of your core competencies
+- All code is a liability you need to maintain
 - Get over your pride
   - You may be able to build a great search engine
   - Your time may be better used elsewhere
@@ -406,4 +407,3 @@ template: heading
 - Clean Code - Robert C. Martin
 - The Pragmatic Programmer - Andrew Hunt, David Thomas
 - Code Complete - Steve McConnell
-
