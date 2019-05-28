@@ -12,19 +12,63 @@ Senior Director, Software Engineering at [Akiri](https://akiri.com)
 
 ---
 
+background-image: url(images/wtfs-per-min.png)
+
+---
+
+# The Good Code
+
+Chris Dail - [@chrisdail](https://twitter.com/chrisdail)
+
+Senior Director, Software Engineering at [Akiri](https://akiri.com)
+
+---
+
+# Once Upon a Time
+
+---
+
+layout: false
+
+# Not Good Code
+
+- Repeated Code - Functions?
+- Right Tool for the Job - Not Bash!
+  - Consider Python - `requests` and `json`
+  - Avoid and Handle Errors
+
+---
+
+background-image: url(images/one_week_later.png)
+
+---
+
+background-image: url(images/three_weeks_later.jpg)
+
+---
+
+template: heading
+background-image: url(images/mind_blown.jpg)
+
+---
+
+background-image: url(images/this_bad_code.jpg)
+template: heading
+![:scale 100%]()
+
+---
+
+template: heading
+
 # Welcome!
 # Everything is fine.
 
 ---
 
 template: heading
-![wtfs](images/wtfs-per-min.png)
 
----
-
-template: heading
-
-# Why is good code important?
+# Why is Good Code
+# Important?
 
 ---
 
@@ -41,7 +85,8 @@ layout: false
 ---
 
 template: heading
-# Good Code Makes Happy Coders
+# Good Code Makes
+# Happy Coders
 
 ---
 
@@ -61,12 +106,12 @@ template: heading
 
 template: heading
 
-# Deadlines... Fix in the Next Release
-## Dangerous Thinking
+# Deadlines...
+## Fix in the Next Release
 
 ---
 
-# You will likely never come back
+# You Will Never Come Back
 
 - Get it Right the First Time
 - There is always a 'Grand Redesign' on the horizon that will never come
@@ -166,7 +211,7 @@ List<User> usersList;
 
 ---
 
-# Naming - Libraries / Modules / Packages
+# Naming - Libraries / Modules
 
 - Top 5 worst modules names
   - `utils`
@@ -231,14 +276,11 @@ if ((i == 0) &&
 
 # Comments
 
-- Add comments only when it enhances the readability of the code
-- If you need to explain your code, maybe the code is not clear
 - Explain **intent** of the code
 - Answer **Why** not **What** or **How**
+- Add comments only when it enhances the readability of the code
+- If you need to explain your code, maybe the code is not clear?
 - Use TODOs sparingly
-  - Things to be implemented soon (by you)
-  - Works in progress
-  - Unimplemented features belong in Trello/JIRA
 
 ---
 
@@ -309,7 +351,7 @@ template: heading
 ---
 
 template: heading
-![rome](images/when-in-rome.jpg)
+background-image: url(images/when-in-rome.jpg)
 
 ---
 
@@ -319,16 +361,16 @@ template: heading
 - Follow the conventions of the language
 - CamelCase vs snake_case
 - Tabs vs Spaces (Java 4 spaces, Go-lang tabs)
-  - Consistent indentation levels
+  - Be consistent
 - If you need to reformat code, do so in a standalone commit
 
 ---
 
 # Error Handling
 
-- Early return for invalid cases (bouncer pattern)
+- Exceptions should be exceptional
 - Behave in reasonable ways over throwing errors (empty list, might as well error)
-  - Exceptions should be exceptional
+- Early return for invalid cases (bouncer pattern)
 - No exception swallowing (empty catch block)
 
 ---
@@ -346,16 +388,61 @@ template: heading
 ---
 
 template: heading
-![copypaste](images/copy-paste.jpg)
+background-image: url(images/copy-paste.jpg)
 
 ---
 
 # Copy and Paste
 
-- Copy-Paste may be the most evil of programming techniques
+- Most evil of programming techniques
 - Single change needs to be fixed in multiple places
 - You may not fully understand the code being copied
 - Consider reuse with functions over copy and paste
+
+---
+
+# Clever Code
+
+- Be wary of "clever" or "cute" code
+- Solutions that are not intuitive may be harder to read
+- Sometimes the more dull, straightforward way is better
+- Keep in mind the programming level of your team
+
+---
+
+template: heading
+# Why is it hard to
+# Write Good Code?
+
+---
+
+background-image: url(images/computational_thinking.jpg)
+
+---
+
+template: heading
+
+# Good Code Is
+# More Art that Math
+
+---
+
+template: heading
+
+# Good Code
+# Tells a Story
+
+---
+
+template: heading
+
+# Questions
+
+---
+
+template: heading
+
+# Bonus!
 
 ---
 
@@ -367,15 +454,6 @@ template: heading
 - Good Commit comments
 - Small commits
 - Small pull requests
-
----
-
-# Clever Code
-
-- Be wary of "clever" or "cute" code
-- Solutions that are not intuitive may be harder to read
-- Sometimes the more dull, straightforward way is better
-- Keep in mind the programming level of your team
 
 ---
 

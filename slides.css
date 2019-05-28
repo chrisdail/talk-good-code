@@ -13,7 +13,7 @@ a, a > code {
     text-decoration: none;
 }
 code {
-    background: #e7e8e2;
+    background-color: #e7e8e2;
 }
 
 li {
@@ -26,10 +26,16 @@ li {
 .good .remark-code { box-shadow: inset 5px 0 #597E41; }
 .bad .remark-code { box-shadow: inset 5px 0 #d33636; }
 
-.good-background { background: #597E41}
+.good-background { background-color: #597E41}
+
+.remark-slide-content {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 .inverse {
-    background: #597E41;
+    background-color: #597E41;
     color: #CCCCCC;
 }
 .inverse h1 {
