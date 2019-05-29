@@ -196,8 +196,7 @@ class: bad
 
 # Naming - Avoid Encodings
 
-- Avoid Type, Scope, Static information encoded in the name
-    - Scope information encoded in the name
+- Avoid encoding names with: Type, Scope, Visibility or Static
     - Hungarian Notation
 - This is what we have IDEs and syntax highlighting for
 
@@ -324,7 +323,7 @@ class: bad
         return true;
     }
 ```
-- Commented Out Code - This is what version control history is for
+- Commented Out Code - Version control history
 - References to bug numbers - Also, version control history
 ```
 // fix for CP-1234
@@ -339,7 +338,8 @@ if (state == null) {
 - Keep line length short (<120 characters)
 - Maximum of 2 levels of indenting in a function in most cases
 - Use whitespace to separate 'paragraphs' of code
-- Variables declared close to usage as possible, instance variables at the top of the class
+- Variables declared close to usage as possible
+- Instance variables at the top of the class
 
 ---
 
@@ -369,7 +369,8 @@ background-image: url(images/when-in-rome.jpg)
 # Error Handling
 
 - Exceptions should be exceptional
-- Behave in reasonable ways over throwing errors (empty list, might as well error)
+- Behave in reasonable ways over throwing errors
+  - Consider Empty list to show no results
 - Early return for invalid cases (bouncer pattern)
 - No exception swallowing (empty catch block)
 
@@ -377,7 +378,8 @@ background-image: url(images/when-in-rome.jpg)
 
 # DRY - Don't Repeat Yourself
 
-- "Every piece of knowledge must have a single unambiguous, authoritative representation within a system" - Pragmatic Programmer
+> "Every piece of knowledge must have a single unambiguous, authoritative representation within a system" - Pragmatic Programmer
+
 - Redundant comments are an example of repetition
 - Multiple developers teams
   - Duplication of validation/util functions
@@ -395,9 +397,10 @@ background-image: url(images/copy-paste.jpg)
 # Copy and Paste
 
 - Most evil of programming techniques
-- Single change needs to be fixed in multiple places
+- Creates Repetition
+- Fix bugs in multiple places
 - You may not fully understand the code being copied
-- Consider reuse with functions over copy and paste
+- Consider reuse with functions instead
 
 ---
 
