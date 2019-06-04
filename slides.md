@@ -76,8 +76,10 @@ layout: false
 
 # Bad Code
 
-- Bad code decreases productivity over time
-- Makes it hard to maintain
+- Decreases productivity over time
+- Hard to maintain
+--
+
 - Broken Window Affect
   - Bad code causes carelessness
   - Leads to more bad code
@@ -90,17 +92,33 @@ template: heading
 
 ---
 
+template: heading
 # Qualities of Good Code
 
-- **Readability**
-  - Other people need to maintain it
-  - Developer spend more time reading than writing code
-- Simple - So it can be understood easily
-- Minimal - No duplication
-- One thing - One thing does one thing
-- No surprises - Should work as expected
-- Meaningful Naming - Self documenting
-- Small, simple abstractions
+---
+
+template: heading
+# Readability
+
+---
+
+# Readability
+
+- Other People
+- Reading vs Writing Code
+
+---
+
+# Simple
+
+- Easily Understood
+- Simple Architecture, Abstractions
+- One Thing does One Thing
+
+---
+
+template: heading
+# No Suprises
 
 ---
 
@@ -114,7 +132,9 @@ template: heading
 # You Will Never Come Back
 
 - Get it Right the First Time
-- There is always a 'Grand Redesign' on the horizon that will never come
+
+--
+- 'Grand Redesign' that never comes
 - Code Reviews: Don't let poor code slip through
 
 ---
@@ -122,11 +142,20 @@ template: heading
 # Quantity and Quality
 
 - Industry average is around 15-50 bugs per 1000 lines of code
-- Writing less code will result in fewer bugs
+--
+
+- Writing less code will result in fewer bugs #HeDidTheMath
+--
+
 - Cannot do this artificially
-  - Remember **Readability**
-  - Go for fewer lines that are more meaningful (quality)
-  - Keep things simple
+  - **Readability!**
+  - Quality - Fewer lines, more meaningful
+  - Simple
+
+---
+
+template: heading
+# Meaningful Naming
 
 ---
 
@@ -213,12 +242,15 @@ List<User> usersList;
 # Naming - Libraries / Modules
 
 - Top 5 worst modules names
+--
+
   - `utils`
   - `commons`
   - `shared`
   - `lib`
   - `tools`
-- No information about their usage
+--
+
 - Alternatives
   - `io`
   - `config`
@@ -343,6 +375,27 @@ if (state == null) {
 
 ---
 
+# Error Handling
+
+- Exceptions should be exceptional
+- Behave in reasonable ways over throwing errors
+  - Consider Empty list to show no results
+- Early return for invalid cases (bouncer pattern)
+- No exception swallowing (empty catch block)
+
+---
+
+# Version Control
+
+- Version Control History should be treated like **code**
+- Readability is important
+- Should read like a story
+- Good Commit comments
+- Small commits
+- Small pull requests
+
+---
+
 template: heading
 
 # Scout Rule
@@ -363,16 +416,6 @@ background-image: url(images/when-in-rome.jpg)
 - Tabs vs Spaces (Java 4 spaces, Go-lang tabs)
   - Be consistent
 - If you need to reformat code, do so in a standalone commit
-
----
-
-# Error Handling
-
-- Exceptions should be exceptional
-- Behave in reasonable ways over throwing errors
-  - Consider Empty list to show no results
-- Early return for invalid cases (bouncer pattern)
-- No exception swallowing (empty catch block)
 
 ---
 
@@ -446,17 +489,6 @@ template: heading
 template: heading
 
 # Bonus!
-
----
-
-# Version Control
-
-- Version Control History should be treated like **code**
-- Readability is important
-- Should read like a story
-- Good Commit comments
-- Small commits
-- Small pull requests
 
 ---
 
