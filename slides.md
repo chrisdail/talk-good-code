@@ -167,14 +167,17 @@ class: bad
 ```
 AccountPrincipal p;
 ```
+--
 - Meaningful distinctions, avoid "noise words" redundant
 ```
 RestClient clientToUse = getClient();
 ```
+--
 - Human readable / searchable - No per character cost
 ```
 String acctNm
 ```
+--
 - Follow standards: like javabean naming in Java.
 
 ---
@@ -266,8 +269,11 @@ class: bad
 ```
 private void validateAndExtractInformationFromZip()
 ```
+--
 - Be wary of **and** in function names
 - You can always call another function
+--
+
 - Should be short (Keep under 20 lines in most cases)
 - Avoid side effects (getName should not change state)
 
@@ -279,19 +285,21 @@ class: bad
 
 - Classes should also **Do One Thing**
 - Single Level of Abstraction
-- Properties and functions follow the "theme" of the class
-- Avoid "Junk Drawer" classes the mix unrelated things
+--
+
+- Properties and functions follow the "theme"
+--
+
+- Avoid "Junk Drawer" classes
 
 ---
-
-class: bad
 
 # Magic Numbers
 
 - Avoid magic numbers or magic strings
 - Use constants defined in one place
-- Add detail with constants (`NUMBER_33` vs `ASCII_CHAR_EXCLAMATION`)
 
+.bad[
 ```
 if ((i == 0) &&
     !((attVal.charAt(i) >= 1 && attVal.charAt(i) <= 31)
@@ -302,6 +310,22 @@ if ((i == 0) &&
     || (attVal.charAt(i) >= 63 && attVal.charAt(i) <= 91)
     || (attVal.charAt(i) >= 93)
 ```
+]
+--
+
+.bad[
+```
+const val NUMBER_33 = 33
+```
+]
+--
+.good[
+```
+const val ASCII_CHAR_EXCLAMATION = 33
+```
+]
+
+- Enhance Readability
 
 ---
 
@@ -309,8 +333,14 @@ if ((i == 0) &&
 
 - Explain **intent** of the code
 - Answer **Why** not **What** or **How**
-- Add comments only when it enhances the readability of the code
+--
+
+- Add comments only when it enhances readability
+--
+
 - If you need to explain your code, maybe the code is not clear?
+--
+
 - Use TODOs sparingly
 
 ---
@@ -355,12 +385,28 @@ class: bad
         return true;
     }
 ```
+--
 - Commented Out Code - Version control history
+--
+
 - References to bug numbers - Also, version control history
 ```
 // fix for CP-1234
 if (state == null) {
 ```
+
+---
+
+# Version Control
+
+- Version Control History should be treated like **code**
+- Readability is important
+- Should read like a story
+--
+
+- Good Commit comments
+- Small commits
+- Small pull requests
 
 ---
 
@@ -378,27 +424,22 @@ if (state == null) {
 # Error Handling
 
 - Exceptions should be exceptional
+--
+
 - Behave in reasonable ways over throwing errors
   - Consider Empty list to show no results
+--
+
 - Early return for invalid cases (bouncer pattern)
 - No exception swallowing (empty catch block)
-
----
-
-# Version Control
-
-- Version Control History should be treated like **code**
-- Readability is important
-- Should read like a story
-- Good Commit comments
-- Small commits
-- Small pull requests
 
 ---
 
 template: heading
 
 # Scout Rule
+--
+
 ## Leave the code better than you found it
 
 ---
@@ -412,9 +453,13 @@ background-image: url(images/when-in-rome.jpg)
 
 - Follow the code style of the codebase you are in
 - Follow the conventions of the language
+--
+
 - CamelCase vs snake_case
-- Tabs vs Spaces (Java 4 spaces, Go-lang tabs)
-  - Be consistent
+- Tabs vs Spaces
+- Be consistent
+--
+
 - If you need to reformat code, do so in a standalone commit
 
 ---
@@ -422,13 +467,19 @@ background-image: url(images/when-in-rome.jpg)
 # DRY - Don't Repeat Yourself
 
 > "Every piece of knowledge must have a single unambiguous, authoritative representation within a system" - Pragmatic Programmer
+--
 
-- Redundant comments are an example of repetition
+- Don't Repeat Yourself
+--
+
+- Reuse code - Functions, Libraries
+- Redundant comments
+--
+
 - Multiple developers teams
   - Duplication of validation/util functions
-  - Central place for these
+  - Centralize and Make reuse easy
   - Look for existing code before your write
-- Make reuse easy
 
 ---
 
@@ -441,17 +492,27 @@ background-image: url(images/copy-paste.jpg)
 
 - Most evil of programming techniques
 - Creates Repetition
+--
+
 - Fix bugs in multiple places
+--
+
 - You may not fully understand the code being copied
+--
+
 - Consider reuse with functions instead
 
 ---
 
 # Clever Code
 
-- Be wary of "clever" or "cute" code
+- Be wary of "clever" code (aka "cute", "magic")
+--
+
 - Solutions that are not intuitive may be harder to read
 - Sometimes the more dull, straightforward way is better
+--
+
 - Keep in mind the programming level of your team
 
 ---
