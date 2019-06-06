@@ -6,9 +6,11 @@ class: center, middle, inverse
 
 # The Good Code
 
-Chris Dail - [@chrisdail](https://twitter.com/chrisdail)
+Chris Dail
 
 Senior Director, Software Engineering at [Akiri](https://akiri.com)
+
+[https://chrisdail.com](https://chrisdail.com) / [@chrisdail](https://twitter.com/chrisdail)
 
 ---
 
@@ -18,9 +20,11 @@ background-image: url(images/wtfs-per-min.png)
 
 # The Good Code
 
-Chris Dail - [@chrisdail](https://twitter.com/chrisdail)
+Chris Dail
 
 Senior Director, Software Engineering at [Akiri](https://akiri.com)
+
+[https://chrisdail.com](https://chrisdail.com) / [@chrisdail](https://twitter.com/chrisdail)
 
 ---
 
