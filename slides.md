@@ -234,7 +234,7 @@ class: bad
 
 - Avoid encoding names with: Type, Scope, Visibility or Static
     - Hungarian Notation
-- This is what we have IDEs and syntax highlighting for
+- This is why we have IDEs and syntax highlighting
 
 ```
 ListBox lb_name
@@ -534,7 +534,7 @@ background-image: url(images/computational_thinking.jpg)
 template: heading
 
 # Good Code Is
-# More Art that Math
+# More Art than Math
 
 ---
 
