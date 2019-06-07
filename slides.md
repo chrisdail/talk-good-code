@@ -84,7 +84,7 @@ layout: false
 - Hard to maintain
 --
 
-- Broken Window Affect
+- Broken Window Effect
   - Bad code causes carelessness
   - Leads to more bad code
 
