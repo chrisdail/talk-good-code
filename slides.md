@@ -8,7 +8,7 @@ class: center, middle, inverse
 
 Chris Dail
 
-Senior Director, Software Engineering at [Akiri](https://akiri.com)
+VP Engineering at [Motryx](https://www.motryx.com/)
 
 [https://chrisdail.com](https://chrisdail.com) / [@chrisdail](https://twitter.com/chrisdail)
 
@@ -22,7 +22,7 @@ background-image: url(images/wtfs-per-min.png)
 
 Chris Dail
 
-Senior Director, Software Engineering at [Akiri](https://akiri.com)
+VP Engineering at [Motryx](https://www.motryx.com/)
 
 [https://chrisdail.com](https://chrisdail.com) / [@chrisdail](https://twitter.com/chrisdail)
 
